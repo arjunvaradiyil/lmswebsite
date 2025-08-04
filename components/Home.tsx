@@ -58,7 +58,7 @@ export default function Home(): JSX.Element {
             </div>
           </div>
           <div className="hidden lg:block" ref={imageRef}>
-            <img src="/Screenshot_2025-08-04_at_3.33.10_PM-removebg-preview.png" alt="LearnX Home" className="max-w-md" />
+            <img src="/home.png" alt="LearnX Home" className="max-w-md" />
           </div>
         </div>
       </div>
