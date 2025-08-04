@@ -34,7 +34,9 @@ export default function Home(): JSX.Element {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-2xl" ref={textRef}>
-            <h1 className='text-4xl font-bold'>EduMatrix</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4 sm:mb-6">
+              EDUMATRIX
+            </h1>
             <p className="text-lg text-gray-600 mb-8">
               World's Finest for Individual Tuition - Comprehensive education from Kindergarten to Post-Graduation across all subjects and syllabi.
             </p>
