@@ -1,13 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import { HeaderProps } from '@/types'
 
-interface HeaderProps {
-  isMenuOpen: boolean
-  toggleMenu: () => void
-}
-
-export default function Header({ isMenuOpen, toggleMenu }: HeaderProps) {
+export default function Header({ isMenuOpen, toggleMenu }: HeaderProps): JSX.Element {
   return (
     <header>
       <Link href="/" className="logo">

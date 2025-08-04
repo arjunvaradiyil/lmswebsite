@@ -1,4 +1,4 @@
-export default function Features() {
+export default function Features(): JSX.Element {
   return (
     <section className="features" id="features">
       <div className="center-text">

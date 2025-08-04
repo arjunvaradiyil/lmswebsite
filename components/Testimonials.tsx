@@ -1,5 +1,7 @@
-export default function Testimonials() {
-  const testimonials = [
+import { Testimonial } from '@/types'
+
+export default function Testimonials(): JSX.Element {
+  const testimonials: Testimonial[] = [
     {
       name: "Devika Dana",
       grade: "10th CBSE School Topper",
@@ -59,7 +61,7 @@ export default function Testimonials() {
       </div>
       <div className="testimonials-marquee">
         <div className="marquee-content">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial: Testimonial, index: number) => (
             <div key={index} className="testimonial-item">
               <div className="testimonial-avatar">
                 <img src={testimonial.avatar} alt={testimonial.name} />
@@ -69,7 +71,7 @@ export default function Testimonials() {
                 <h6>{testimonial.grade}</h6>
                 <p>{testimonial.feedback}</p>
                 <div className="rating">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_, i: number) => (
                     <i key={i} className='bx bxs-star'></i>
                   ))}
                 </div>
@@ -77,7 +79,7 @@ export default function Testimonials() {
             </div>
           ))}
           {/* Duplicate for seamless marquee */}
-          {testimonials.map((testimonial, index) => (
+          {testimonials.map((testimonial: Testimonial, index: number) => (
             <div key={`duplicate-${index}`} className="testimonial-item">
               <div className="testimonial-avatar">
                 <img src={testimonial.avatar} alt={testimonial.name} />
@@ -87,7 +89,7 @@ export default function Testimonials() {
                 <h6>{testimonial.grade}</h6>
                 <p>{testimonial.feedback}</p>
                 <div className="rating">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating)].map((_, i: number) => (
                     <i key={i} className='bx bxs-star'></i>
                   ))}
                 </div>

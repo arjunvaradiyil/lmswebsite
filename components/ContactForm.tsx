@@ -1,7 +1,7 @@
 'use client'
 
-export default function ContactForm() {
-  const handleSubmit = (e: React.FormEvent) => {
+export default function ContactForm(): JSX.Element {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     // Handle form submission
     console.log('Contact form submitted')

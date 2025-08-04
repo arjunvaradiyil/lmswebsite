@@ -3,22 +3,19 @@
 import { useState, useEffect } from 'react'
 import Header from '@/components/Header'
 import Home from '@/components/Home'
-import Container from '@/components/Container'
-import Categories from '@/components/Categories'
+import About from '@/components/About'
 import Features from '@/components/Features'
-import Courses from '@/components/Courses'
 import Testimonials from '@/components/Testimonials'
 import Register from '@/components/Register'
 import FAQ from '@/components/FAQ'
-import About from '@/components/About'
 import ContactForm from '@/components/ContactForm'
 import Footer from '@/components/Footer'
 
-export default function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+export default function HomePage(): JSX.Element {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
+  useEffect((): (() => void) => {
+    const handleScroll = (): void => {
       const header = document.querySelector('header')
       if (header) {
         header.classList.toggle('sticky', window.scrollY > 100)
@@ -29,7 +26,7 @@ export default function HomePage() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen)
   }
 

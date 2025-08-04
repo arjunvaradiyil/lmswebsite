@@ -1,13 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { FAQItem } from '@/types'
 
-interface FAQItem {
-  question: string
-  answer: string
-}
-
-export default function FAQ() {
+export default function FAQ(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
   const faqData: FAQItem[] = [
@@ -45,7 +41,7 @@ export default function FAQ() {
     }
   ]
 
-  const toggleFAQ = (index: number) => {
+  const toggleFAQ = (index: number): void => {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
@@ -56,7 +52,7 @@ export default function FAQ() {
         <h2>Common Questions About LearnX</h2>
       </div>
       <div className="faq-content">
-        {faqData.map((faq, index) => (
+        {faqData.map((faq: FAQItem, index: number) => (
           <div key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
             <div className="faq-question" onClick={() => toggleFAQ(index)}>
               <h4>{faq.question}</h4>

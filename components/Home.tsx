@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <section className="home" id="home">
       <div className="home-text">

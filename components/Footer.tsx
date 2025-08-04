@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer(): JSX.Element {
   return (
     <section className="contact">
       <div className="main-contact">
@@ -15,7 +15,6 @@ export default function Footer() {
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#courses">Courses</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
         </div>
         
