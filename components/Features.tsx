@@ -32,10 +32,10 @@ export default function Features(): JSX.Element {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-primary-50" id="features" ref={featuresRef}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12" ref={headerRef}>
-          <h5 className="text-primary-600 font-semibold mb-2">Why Choose LearnX?</h5>
+          <h5 className="text-primary-600 font-semibold mb-2">Why Choose EduMatrix?</h5>
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Features</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover what makes LearnX the preferred choice for quality education and personalized learning experiences.
+            Discover what makes EduMatrix the preferred choice for quality education and personalized learning experiences.
           </p>
         </div>
         

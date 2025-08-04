@@ -53,17 +53,7 @@ export default function About(): JSX.Element {
               To become the most trusted name in individual tuition, recognized for excellence in education delivery, student success, and innovative learning solutions that transform lives.
             </p>
             
-            <h5 className="text-xl font-semibold text-primary-600 mt-6 mb-3">Why Choose LearnX?</h5>
-            <ul className="space-y-2">
-              <li className="text-gray-600">• Expert, verified tutors with proven track records</li>
-              <li className="text-gray-600">• Flexible learning options - home tuition & online classes</li>
-              <li className="text-gray-600">• Personalized attention with one-to-one and group options</li>
-              <li className="text-gray-600">• Monthly assessments and detailed progress reports</li>
-              <li className="text-gray-600">• Multilingual instruction in 8+ languages</li>
-              <li className="text-gray-600">• Comprehensive coverage from KG to PG</li>
-              <li className="text-gray-600">• Specialized programs for competitive exams</li>
-              <li className="text-gray-600">• Parent support through dedicated WhatsApp groups</li>
-            </ul>
+            
           </div>
         </div>
       </div>

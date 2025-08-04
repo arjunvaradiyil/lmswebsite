@@ -86,7 +86,7 @@ export default function ContactForm(): JSX.Element {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-1">Email Address</h4>
-                  <p className="text-gray-600">info@learnx.com<br />support@learnx.com</p>
+                  <p className="text-gray-600">info@edumatrix.com<br />support@edumatrix.com</p>
                 </div>
               </div>
               

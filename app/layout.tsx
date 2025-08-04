@@ -9,10 +9,10 @@ const montserrat = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'LearnX - World\'s Finest for Individual Tuition',
-  description: 'LearnX offers comprehensive education from Kindergarten to Post-Graduation across all subjects and syllabi. Expert tutors, flexible learning options, and personalized mentoring.',
-  keywords: 'education, tuition, online learning, tutoring, LearnX, individual tuition, expert tutors',
-  authors: [{ name: 'LearnX' }],
+  title: 'EduMatrix - World\'s Finest for Individual Tuition',
+  description: 'EduMatrix offers comprehensive education from Kindergarten to Post-Graduation across all subjects and syllabi. Expert tutors, flexible learning options, and personalized mentoring.',
+  keywords: 'education, tuition, online learning, tutoring, EduMatrix, individual tuition, expert tutors',
+  authors: [{ name: 'EduMatrix' }],
 }
 
 export const viewport: Viewport = {

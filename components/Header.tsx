@@ -10,7 +10,7 @@ export default function Header({ isMenuOpen, toggleMenu }: HeaderProps): JSX.Ele
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="logo">
             <span className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-              LearnX
+              EduMatrix
             </span>
           </Link>
           

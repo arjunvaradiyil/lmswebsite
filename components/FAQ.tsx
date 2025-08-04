@@ -40,7 +40,7 @@ export default function FAQ(): JSX.Element {
       answer: "We offer classes in multiple languages including English, Hindi, Arabic, Malayalam, Tamil, Kannada, Marathi, Odiya, and more. You can choose your preferred language of instruction."
     },
     {
-      question: "How do I get started with LearnX?",
+      question: "How do I get started with EduMatrix?",
       answer: "Getting started is easy! Simply fill out our registration form, select your preferred subjects and class level, and our team will contact you within 24 hours to schedule a consultation and begin your learning journey."
     }
   ]
@@ -74,7 +74,7 @@ export default function FAQ(): JSX.Element {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12" ref={headerRef}>
           <h5 className="text-primary-600 font-semibold mb-2">Frequently Asked Questions</h5>
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Common Questions About LearnX</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Common Questions About EduMatrix</h2>
         </div>
         
         <div className="max-w-4xl mx-auto space-y-4" ref={itemsRef}>

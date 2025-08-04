@@ -38,7 +38,7 @@ export default function Register(): JSX.Element {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary-50 to-primary-50" id="register" ref={registerRef}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12" ref={headerRef}>
-          <h5 className="text-primary-600 font-semibold mb-2">Join LearnX Today</h5>
+          <h5 className="text-primary-600 font-semibold mb-2">Join EduMatrix Today</h5>
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Start Your Learning Journey</h2>
         </div>
         
