@@ -39,8 +39,9 @@ export default function Footer(): JSX.Element {
           </div>
         </div>
         
-        <div className="text-center mt-8 pt-8 border-t border-gray-200">
-          <p className="text-gray-500">© 2025 EduMatrix <strong>DEVELOPED BY</strong> <strong>Arjun Varadiyil</strong>. All rights reserved.</p>
+        <div className="flex justify-between items-center mt-8 pt-8 border-t border-gray-200">
+          <p className="text-gray-500">© 2025 EduMatrix. All rights reserved.</p>
+          <p className="text-gray-500"><strong>DEVELOPED BY</strong> <a href="https://arjunvaradiyil.in" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 transition-colors duration-300"><strong>Arjun Varadiyil</strong></a></p>
         </div>
       </div>
     </section>

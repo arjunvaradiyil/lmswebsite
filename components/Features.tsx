@@ -29,7 +29,7 @@ export default function Features(): JSX.Element {
   }, [])
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-primary-50" id="features" ref={featuresRef}>
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-primary-50 my-8" id="features" ref={featuresRef}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12" ref={headerRef}>
           <h5 className="text-primary-600 font-semibold mb-2">Why Choose EduMatrix?</h5>
@@ -39,8 +39,8 @@ export default function Features(): JSX.Element {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ref={cardsRef}>
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div className="flex flex-nowrap overflow-x-auto gap-6 pb-4" ref={cardsRef}>
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-80">
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
               <i className='bx bx-graduation text-3xl text-primary-600'></i>
             </div>
@@ -53,7 +53,7 @@ export default function Features(): JSX.Element {
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-80">
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
               <i className='bx bx-user-check text-3xl text-primary-600'></i>
             </div>
@@ -66,7 +66,7 @@ export default function Features(): JSX.Element {
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-80">
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
               <i className='bx bx-home-alt text-3xl text-primary-600'></i>
             </div>
@@ -79,7 +79,7 @@ export default function Features(): JSX.Element {
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-80">
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
               <i className='bx bx-group text-3xl text-primary-600'></i>
             </div>
@@ -92,7 +92,7 @@ export default function Features(): JSX.Element {
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-80">
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
               <i className='bx bx-chart text-3xl text-primary-600'></i>
             </div>
@@ -105,7 +105,7 @@ export default function Features(): JSX.Element {
             </div>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-80">
             <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
               <i className='bx bx-globe text-3xl text-primary-600'></i>
             </div>
