@@ -1,12 +1,41 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useGSAP } from '@/hooks/useGSAP'
+
 export default function About(): JSX.Element {
+  const { elementRef: aboutRef, scrollTriggerAnimation, fadeInUp } = useGSAP<HTMLDivElement>()
+  const { elementRef: imageRef, slideInLeft } = useGSAP<HTMLDivElement>()
+  const { elementRef: contentRef, fadeInUp: contentFadeIn } = useGSAP<HTMLDivElement>()
+
+  useEffect(() => {
+    // About section animation
+    scrollTriggerAnimation(
+      () => fadeInUp({ duration: 1.2, delay: 0.2 }),
+      { trigger: aboutRef.current, start: 'top 85%' }
+    )
+
+    // Image animation
+    scrollTriggerAnimation(
+      () => slideInLeft({ duration: 1.5, delay: 0.5, ease: 'power2.out' }),
+      { trigger: imageRef.current, start: 'top 80%' }
+    )
+
+    // Content animation
+    scrollTriggerAnimation(
+      () => contentFadeIn({ duration: 1, delay: 0.8, stagger: 0.2 }),
+      { trigger: contentRef.current, start: 'top 80%' }
+    )
+  }, [])
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="about">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="about" ref={aboutRef}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="mb-8 lg:mb-0">
+          <div className="mb-8 lg:mb-0" ref={imageRef}>
             <img src="/about.png" alt="About LearnX" className="w-full max-w-lg mx-auto rounded-xl shadow-lg" />
           </div>
-          <div>
+          <div ref={contentRef}>
             <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-6">
               About LearnX
             </h2>

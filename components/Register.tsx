@@ -1,22 +1,49 @@
 'use client'
 
+import { useEffect } from 'react'
+import { useGSAP } from '@/hooks/useGSAP'
+
 export default function Register(): JSX.Element {
+  const { elementRef: registerRef, scrollTriggerAnimation, fadeInUp } = useGSAP<HTMLElement>()
+  const { elementRef: headerRef, fadeInUp: headerFadeIn } = useGSAP<HTMLDivElement>()
+  const { elementRef: formRef, fadeInUp: formFadeIn } = useGSAP<HTMLFormElement>()
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     // Handle form submission
     console.log('Registration form submitted')
   }
 
+  useEffect(() => {
+    // Register section animation
+    scrollTriggerAnimation(
+      () => fadeInUp({ duration: 1.2, delay: 0.2 }),
+      { trigger: registerRef.current, start: 'top 85%' }
+    )
+
+    // Header animation
+    scrollTriggerAnimation(
+      () => headerFadeIn({ duration: 1, delay: 0.5 }),
+      { trigger: headerRef.current, start: 'top 80%' }
+    )
+
+    // Form animation
+    scrollTriggerAnimation(
+      () => formFadeIn({ duration: 1, delay: 0.8, stagger: 0.1 }),
+      { trigger: formRef.current, start: 'top 80%' }
+    )
+  }, [])
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary-50 to-primary-50" id="register">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary-50 to-primary-50" id="register" ref={registerRef}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" ref={headerRef}>
           <h5 className="text-primary-600 font-semibold mb-2">Join LearnX Today</h5>
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Start Your Learning Journey</h2>
         </div>
         
         <div className="max-w-2xl mx-auto">
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={handleSubmit} ref={formRef}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <input 

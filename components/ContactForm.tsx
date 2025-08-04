@@ -1,16 +1,50 @@
 'use client'
 
+import { useEffect } from 'react'
+import { useGSAP } from '@/hooks/useGSAP'
+
 export default function ContactForm(): JSX.Element {
+  const { elementRef: contactRef, scrollTriggerAnimation, fadeInUp } = useGSAP<HTMLElement>()
+  const { elementRef: headerRef, fadeInUp: headerFadeIn } = useGSAP<HTMLDivElement>()
+  const { elementRef: infoRef, slideInLeft } = useGSAP<HTMLDivElement>()
+  const { elementRef: formRef, slideInRight } = useGSAP<HTMLDivElement>()
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault()
     // Handle form submission
     console.log('Contact form submitted')
   }
 
+  useEffect(() => {
+    // Contact section animation
+    scrollTriggerAnimation(
+      () => fadeInUp({ duration: 1.2, delay: 0.2 }),
+      { trigger: contactRef.current, start: 'top 85%' }
+    )
+
+    // Header animation
+    scrollTriggerAnimation(
+      () => headerFadeIn({ duration: 1, delay: 0.5 }),
+      { trigger: headerRef.current, start: 'top 80%' }
+    )
+
+    // Contact info animation
+    scrollTriggerAnimation(
+      () => slideInLeft({ duration: 1.5, delay: 0.8, ease: 'power2.out' }),
+      { trigger: infoRef.current, start: 'top 80%' }
+    )
+
+    // Form animation
+    scrollTriggerAnimation(
+      () => slideInRight({ duration: 1.5, delay: 1, ease: 'power2.out' }),
+      { trigger: formRef.current, start: 'top 80%' }
+    )
+  }, [])
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-primary-50" id="contact-form">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-primary-50" id="contact-form" ref={contactRef}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" ref={headerRef}>
           <h5 className="text-primary-600 font-semibold mb-2">Get In Touch</h5>
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -19,7 +53,7 @@ export default function ContactForm(): JSX.Element {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div>
+          <div ref={infoRef}>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">Contact Information</h3>
             <p className="text-gray-600 mb-8">
               Ready to start your learning journey? Reach out to us through any of these channels.
@@ -68,7 +102,7 @@ export default function ContactForm(): JSX.Element {
             </div>
           </div>
 
-          <div>
+          <div ref={formRef}>
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

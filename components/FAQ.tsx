@@ -1,10 +1,14 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useGSAP } from '@/hooks/useGSAP'
 import { FAQItem } from '@/types'
 
 export default function FAQ(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const { elementRef: faqRef, scrollTriggerAnimation, fadeInUp } = useGSAP<HTMLElement>()
+  const { elementRef: headerRef, fadeInUp: headerFadeIn } = useGSAP<HTMLDivElement>()
+  const { elementRef: itemsRef, fadeInUp: itemsFadeIn } = useGSAP<HTMLDivElement>()
 
   const faqData: FAQItem[] = [
     {
@@ -45,15 +49,35 @@ export default function FAQ(): JSX.Element {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
+  useEffect(() => {
+    // FAQ section animation
+    scrollTriggerAnimation(
+      () => fadeInUp({ duration: 1.2, delay: 0.2 }),
+      { trigger: faqRef.current, start: 'top 85%' }
+    )
+
+    // Header animation
+    scrollTriggerAnimation(
+      () => headerFadeIn({ duration: 1, delay: 0.5 }),
+      { trigger: headerRef.current, start: 'top 80%' }
+    )
+
+    // FAQ items animation
+    scrollTriggerAnimation(
+      () => itemsFadeIn({ duration: 1, delay: 0.8, stagger: 0.1 }),
+      { trigger: itemsRef.current, start: 'top 80%' }
+    )
+  }, [])
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="faq">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="faq" ref={faqRef}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" ref={headerRef}>
           <h5 className="text-primary-600 font-semibold mb-2">Frequently Asked Questions</h5>
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Common Questions About LearnX</h2>
         </div>
         
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto space-y-4" ref={itemsRef}>
           {faqData.map((faq: FAQItem, index: number) => (
             <div key={index} className={`border border-gray-200 rounded-lg overflow-hidden ${activeIndex === index ? 'active' : ''}`}>
               <div 

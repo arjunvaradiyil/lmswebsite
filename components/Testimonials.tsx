@@ -1,6 +1,14 @@
+'use client'
+
+import { useEffect } from 'react'
+import { useGSAP } from '@/hooks/useGSAP'
 import { Testimonial } from '@/types'
 
 export default function Testimonials(): JSX.Element {
+  const { elementRef: testimonialsRef, scrollTriggerAnimation, fadeInUp } = useGSAP<HTMLElement>()
+  const { elementRef: headerRef, fadeInUp: headerFadeIn } = useGSAP<HTMLDivElement>()
+  const { elementRef: marqueeRef, timeline } = useGSAP<HTMLDivElement>()
+
   const testimonials: Testimonial[] = [
     {
       name: "Devika Dana",
@@ -53,16 +61,45 @@ export default function Testimonials(): JSX.Element {
     }
   ]
 
+  useEffect(() => {
+    // Testimonials section animation
+    scrollTriggerAnimation(
+      () => fadeInUp({ duration: 1.2, delay: 0.2 }),
+      { trigger: testimonialsRef.current, start: 'top 85%' }
+    )
+
+    // Header animation
+    scrollTriggerAnimation(
+      () => headerFadeIn({ duration: 1, delay: 0.5 }),
+      { trigger: headerRef.current, start: 'top 80%' }
+    )
+
+    // Enhanced marquee animation
+    if (marqueeRef.current) {
+      const tl = timeline()
+      tl.fromTo(
+        marqueeRef.current,
+        { x: 0 },
+        { 
+          x: '-50%', 
+          duration: 25, 
+          ease: 'none',
+          repeat: -1
+        }
+      )
+    }
+  }, [])
+
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="testimonials">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="testimonials" ref={testimonialsRef}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" ref={headerRef}>
           <h5 className="text-primary-600 font-semibold mb-2">What Our Students & Parents Say</h5>
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Success Stories</h2>
         </div>
         
         <div className="overflow-hidden">
-          <div className="flex animate-marquee">
+          <div className="flex" ref={marqueeRef}>
             {testimonials.map((testimonial: Testimonial, index: number) => (
               <div key={index} className="bg-white rounded-xl shadow-md p-6 min-w-[300px] mx-4">
                 <div className="mb-4">
