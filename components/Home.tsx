@@ -57,8 +57,8 @@ export default function Home(): JSX.Element {
               </form>
             </div>
           </div>
-          <div className="hidden lg:block" ref={imageRef}>
-            <img src="/home.png" alt="LearnX Home" className="max-w-md" />
+          <div className="flex justify-center lg:justify-end" ref={imageRef}>
+            <img src="/home.png" alt="LearnX Home" className="max-w-md w-full" />
           </div>
         </div>
       </div>
