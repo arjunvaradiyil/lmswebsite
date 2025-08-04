@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { useGSAP } from '@/hooks/useGSAP'
 
 export default function About(): JSX.Element {
-  const { elementRef: aboutRef, scrollTriggerAnimation, fadeInUp } = useGSAP<HTMLDivElement>()
+  const { elementRef: aboutRef, scrollTriggerAnimation, fadeInUp } = useGSAP<HTMLElement>()
   const { elementRef: imageRef, slideInLeft } = useGSAP<HTMLDivElement>()
   const { elementRef: contentRef, fadeInUp: contentFadeIn } = useGSAP<HTMLDivElement>()
 

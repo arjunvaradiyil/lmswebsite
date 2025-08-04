@@ -4,9 +4,9 @@ import { useEffect } from 'react'
 import { useGSAP } from '@/hooks/useGSAP'
 
 export default function Home(): JSX.Element {
-  const { elementRef: heroRef, scrollTriggerAnimation, fadeInUp, slideInRight } = useGSAP()
-  const { elementRef: textRef, fadeInUp: textFadeIn } = useGSAP()
-  const { elementRef: imageRef, scaleIn } = useGSAP()
+  const { elementRef: heroRef, scrollTriggerAnimation, fadeInUp, slideInRight } = useGSAP<HTMLDivElement>()
+  const { elementRef: textRef, fadeInUp: textFadeIn } = useGSAP<HTMLDivElement>()
+  const { elementRef: imageRef, scaleIn } = useGSAP<HTMLDivElement>()
 
   useEffect(() => {
     // Hero section animation

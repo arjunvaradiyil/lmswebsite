@@ -40,7 +40,7 @@ export default function Footer(): JSX.Element {
         </div>
         
         <div className="text-center mt-8 pt-8 border-t border-gray-700">
-          <p className="text-gray-400">© 2024 LearnX. All rights reserved.</p>
+          <p className="text-gray-400">© 2025 LearnX. All rights reserved.</p>
         </div>
       </div>
     </section>

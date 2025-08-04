@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Montserrat } from 'next/font/google'
 import './globals.css'
 
@@ -13,7 +13,11 @@ export const metadata: Metadata = {
   description: 'LearnX offers comprehensive education from Kindergarten to Post-Graduation across all subjects and syllabi. Expert tutors, flexible learning options, and personalized mentoring.',
   keywords: 'education, tuition, online learning, tutoring, LearnX, individual tuition, expert tutors',
   authors: [{ name: 'LearnX' }],
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 interface RootLayoutProps {
