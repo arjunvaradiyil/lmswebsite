@@ -1,42 +1,47 @@
 export default function Footer(): JSX.Element {
   return (
-    <section className="contact">
-      <div className="main-contact">
-        <div className="contact-content">
-          <h3 style={{fontSize: '2rem', fontWeight: '800', color: 'var(--main-color)', marginBottom: '20px'}}>LearnX</h3>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">LinkedIn</a></li>
+    <section className="bg-gray-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-4">
+              LearnX
+            </h3>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Facebook</a></li>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Instagram</a></li>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Twitter</a></li>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">LinkedIn</a></li>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <li className="mb-2"><a href="#home" className="text-gray-300 hover:text-white transition-colors duration-300">Home</a></li>
+            <li className="mb-2"><a href="#about" className="text-gray-300 hover:text-white transition-colors duration-300">About Us</a></li>
+            <li className="mb-2"><a href="#features" className="text-gray-300 hover:text-white transition-colors duration-300">Features</a></li>
+            <li className="mb-2"><a href="#testimonials" className="text-gray-300 hover:text-white transition-colors duration-300">Testimonials</a></li>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Our Programs</h4>
+            <li className="mb-2"><a href="#register" className="text-gray-300 hover:text-white transition-colors duration-300">KG to 12th Grade</a></li>
+            <li className="mb-2"><a href="#register" className="text-gray-300 hover:text-white transition-colors duration-300">Higher Education</a></li>
+            <li className="mb-2"><a href="#register" className="text-gray-300 hover:text-white transition-colors duration-300">Competitive Exams</a></li>
+            <li className="mb-2"><a href="#register" className="text-gray-300 hover:text-white transition-colors duration-300">Special Programs</a></li>
+            <li className="mb-2"><a href="#register" className="text-gray-300 hover:text-white transition-colors duration-300">Online Classes</a></li>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">Tech Park, Bangalore,<br />Karnataka, India</a></li>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">info@learnx.com</a></li>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">+91 98765 43210</a></li>
+            <li className="mb-2"><a href="#" className="text-gray-300 hover:text-white transition-colors duration-300">+91 87654 32109</a></li>
+          </div>
         </div>
         
-        <div className="contact-content">
-          <h4>Quick Links</h4>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+        <div className="text-center mt-8 pt-8 border-t border-gray-700">
+          <p className="text-gray-400">© 2024 LearnX. All rights reserved.</p>
         </div>
-        
-        <div className="contact-content">
-          <h4>Our Programs</h4>
-          <li><a href="#register">KG to 12th Grade</a></li>
-          <li><a href="#register">Higher Education</a></li>
-          <li><a href="#register">Competitive Exams</a></li>
-          <li><a href="#register">Special Programs</a></li>
-          <li><a href="#register">Online Classes</a></li>
-        </div>
-        
-        <div className="contact-content">
-          <h4>Contact Info</h4>
-          <li><a href="#">Tech Park, Bangalore,<br />Karnataka, India</a></li>
-          <li><a href="#">info@learnx.com</a></li>
-          <li><a href="#">+91 98765 43210</a></li>
-          <li><a href="#">+91 87654 32109</a></li>
-        </div>
-      </div>
-      <div className="last-text">
-        <p>© 2024 LearnX. All rights reserved.</p>
       </div>
     </section>
   )

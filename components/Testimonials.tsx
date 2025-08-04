@@ -54,48 +54,51 @@ export default function Testimonials(): JSX.Element {
   ]
 
   return (
-    <section className="testimonials" id="testimonials">
-      <div className="center-text">
-        <h5>What Our Students & Parents Say</h5>
-        <h2>Success Stories</h2>
-      </div>
-      <div className="testimonials-marquee">
-        <div className="marquee-content">
-          {testimonials.map((testimonial: Testimonial, index: number) => (
-            <div key={index} className="testimonial-item">
-              <div className="testimonial-avatar">
-                <img src={testimonial.avatar} alt={testimonial.name} />
-              </div>
-              <div className="testimonial-info">
-                <h4>{testimonial.name}</h4>
-                <h6>{testimonial.grade}</h6>
-                <p>{testimonial.feedback}</p>
-                <div className="rating">
-                  {[...Array(testimonial.rating)].map((_, i: number) => (
-                    <i key={i} className='bx bxs-star'></i>
-                  ))}
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="testimonials">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h5 className="text-primary-600 font-semibold mb-2">What Our Students & Parents Say</h5>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Success Stories</h2>
+        </div>
+        
+        <div className="overflow-hidden">
+          <div className="flex animate-marquee">
+            {testimonials.map((testimonial: Testimonial, index: number) => (
+              <div key={index} className="bg-white rounded-xl shadow-md p-6 min-w-[300px] mx-4">
+                <div className="mb-4">
+                  <img src={testimonial.avatar} alt={testimonial.name} className="w-16 h-16 rounded-full mx-auto" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 mb-1">{testimonial.name}</h4>
+                  <h6 className="text-sm text-primary-600 mb-3">{testimonial.grade}</h6>
+                  <p className="text-gray-600 mb-3">{testimonial.feedback}</p>
+                  <div className="flex justify-center gap-1">
+                    {[...Array(testimonial.rating)].map((_, i: number) => (
+                      <i key={i} className='bx bxs-star text-yellow-400'></i>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-          {/* Duplicate for seamless marquee */}
-          {testimonials.map((testimonial: Testimonial, index: number) => (
-            <div key={`duplicate-${index}`} className="testimonial-item">
-              <div className="testimonial-avatar">
-                <img src={testimonial.avatar} alt={testimonial.name} />
-              </div>
-              <div className="testimonial-info">
-                <h4>{testimonial.name}</h4>
-                <h6>{testimonial.grade}</h6>
-                <p>{testimonial.feedback}</p>
-                <div className="rating">
-                  {[...Array(testimonial.rating)].map((_, i: number) => (
-                    <i key={i} className='bx bxs-star'></i>
-                  ))}
+            ))}
+            {/* Duplicate for seamless marquee */}
+            {testimonials.map((testimonial: Testimonial, index: number) => (
+              <div key={`duplicate-${index}`} className="bg-white rounded-xl shadow-md p-6 min-w-[300px] mx-4">
+                <div className="mb-4">
+                  <img src={testimonial.avatar} alt={testimonial.name} className="w-16 h-16 rounded-full mx-auto" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-800 mb-1">{testimonial.name}</h4>
+                  <h6 className="text-sm text-primary-600 mb-3">{testimonial.grade}</h6>
+                  <p className="text-gray-600 mb-3">{testimonial.feedback}</p>
+                  <div className="flex justify-center gap-1">
+                    {[...Array(testimonial.rating)].map((_, i: number) => (
+                      <i key={i} className='bx bxs-star text-yellow-400'></i>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

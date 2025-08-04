@@ -46,23 +46,31 @@ export default function FAQ(): JSX.Element {
   }
 
   return (
-    <section className="faq" id="faq">
-      <div className="center-text">
-        <h5>Frequently Asked Questions</h5>
-        <h2>Common Questions About LearnX</h2>
-      </div>
-      <div className="faq-content">
-        {faqData.map((faq: FAQItem, index: number) => (
-          <div key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
-            <div className="faq-question" onClick={() => toggleFAQ(index)}>
-              <h4>{faq.question}</h4>
-              <i className='bx bx-plus'></i>
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white" id="faq">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h5 className="text-primary-600 font-semibold mb-2">Frequently Asked Questions</h5>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Common Questions About LearnX</h2>
+        </div>
+        
+        <div className="max-w-4xl mx-auto space-y-4">
+          {faqData.map((faq: FAQItem, index: number) => (
+            <div key={index} className={`border border-gray-200 rounded-lg overflow-hidden ${activeIndex === index ? 'active' : ''}`}>
+              <div 
+                className="flex items-center justify-between p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-300"
+                onClick={() => toggleFAQ(index)}
+              >
+                <h4 className="text-lg font-semibold text-gray-800">{faq.question}</h4>
+                <i className={`bx bx-plus text-2xl text-primary-600 transition-transform duration-300 ${activeIndex === index ? 'rotate-45' : ''}`}></i>
+              </div>
+              {activeIndex === index && (
+                <div className="px-6 pb-6">
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              )}
             </div>
-            <div className="faq-answer">
-              <p>{faq.answer}</p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )
