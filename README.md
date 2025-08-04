@@ -1,4 +1,4 @@
-# LearnX - LMS Website
+# EduMatrix - LMS Website
 
 A modern Learning Management System (LMS) website built with Next.js, TypeScript, and Tailwind CSS.
 
@@ -133,8 +133,8 @@ This project is licensed under the MIT License.
 ## 📞 Contact
 
 For questions or support, please contact:
-- Email: info@learnx.com
-- Phone: +91 98765 43210
+- Email: arjunvaradiyil203@gmail.com
+- Phone: +91 9946642065
 
 ---
 
