@@ -39,8 +39,6 @@ export default function Header({ isMenuOpen, toggleMenu }: HeaderProps): JSX.Ele
           </nav>
 
           <div className="flex items-center gap-4 lg:hidden">
-            <i className='bx bx-search text-xl text-gray-600 hover:text-primary-600 cursor-pointer transition-colors duration-300'></i>
-            <i className='bx bx-user text-xl text-gray-600 hover:text-primary-600 cursor-pointer transition-colors duration-300'></i>
             <i 
               className='bx bx-menu text-xl text-gray-600 hover:text-primary-600 cursor-pointer transition-colors duration-300' 
               onClick={toggleMenu}
@@ -48,6 +46,37 @@ export default function Header({ isMenuOpen, toggleMenu }: HeaderProps): JSX.Ele
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40" onClick={toggleMenu}>
+          <div className="fixed top-16 left-0 right-0 bg-white shadow-lg border-t border-gray-200" onClick={(e) => e.stopPropagation()}>
+            <nav className="flex flex-col py-4">
+              <Link href="/" className="px-6 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-300" onClick={toggleMenu}>
+                Home
+              </Link>
+              <Link href="#about" className="px-6 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-300" onClick={toggleMenu}>
+                About
+              </Link>
+              <Link href="#features" className="px-6 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-300" onClick={toggleMenu}>
+                Features
+              </Link>
+              <Link href="#testimonials" className="px-6 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-300" onClick={toggleMenu}>
+                Testimonials
+              </Link>
+              <Link href="#register" className="px-6 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-300" onClick={toggleMenu}>
+                Register
+              </Link>
+              <Link href="#faq" className="px-6 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-300" onClick={toggleMenu}>
+                FAQ
+              </Link>
+              <Link href="#contact-form" className="px-6 py-3 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium transition-colors duration-300" onClick={toggleMenu}>
+                Contact
+              </Link>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   )
 } 
