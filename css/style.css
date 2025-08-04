@@ -1184,3 +1184,252 @@ header.sticky{
 		font-size: 1.3rem;
 	}
 }
+
+
+
+/* Contact Form Section Styles for Index Page */
+.contact-form-section{
+	background: url(../img/coursebg.png);
+	background-size: cover;
+	background-position: center;
+	padding: 80px 13%;
+}
+
+.contact-form-container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	max-width: 1200px;
+	margin: 4rem auto 0;
+	align-items: start;
+}
+
+.contact-info-side h3{
+	font-size: 2rem;
+	margin-bottom: 15px;
+	color: var(--text-color);
+}
+
+.contact-info-side > p{
+	color: var(--second-color);
+	font-size: 1.1rem;
+	margin-bottom: 30px;
+}
+
+.contact-info-cards{
+	display: grid;
+	gap: 1.5rem;
+}
+
+.contact-info-card{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 20px;
+	background: var(--bg-color);
+	border-radius: 15px;
+	box-shadow: 0px 5px 20px rgb(19 8 73 / 8%);
+	transition: all .40s ease;
+}
+
+.contact-info-card:hover{
+	transform: translateY(-3px);
+	box-shadow: 0px 8px 25px rgb(19 8 73 / 15%);
+}
+
+.contact-info-icon{
+	width: 50px;
+	height: 50px;
+	background: linear-gradient(135deg, var(--main-color), #059669);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.contact-info-icon i{
+	font-size: 20px;
+	color: var(--bg-color);
+}
+
+.contact-info-details h4{
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: var(--text-color);
+}
+
+.contact-info-details p{
+	color: var(--second-color);
+	line-height: 1.5;
+	font-size: 0.95rem;
+}
+
+.contact-form-side h3{
+	font-size: 2rem;
+	margin-bottom: 25px;
+	color: var(--text-color);
+}
+
+.main-contact-form{
+	background: var(--bg-color);
+	padding: 35px;
+	border-radius: 20px;
+	box-shadow: 0px 5px 40px rgb(19 8 73 / 13%);
+}
+
+.main-contact-form .form-row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.main-contact-form .form-group{
+	margin-bottom: 20px;
+}
+
+.main-contact-form label{
+	display: block;
+	margin-bottom: 6px;
+	font-weight: 600;
+	color: var(--text-color);
+	font-size: 0.95rem;
+}
+
+.main-contact-form input,
+.main-contact-form select,
+.main-contact-form textarea{
+	width: 100%;
+	padding: 12px 15px;
+	border: 2px solid #e9ecef;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	transition: all .40s ease;
+	background: var(--bg-color);
+}
+
+.main-contact-form input:focus,
+.main-contact-form select:focus,
+.main-contact-form textarea:focus{
+	border-color: var(--main-color);
+	outline: none;
+	box-shadow: 0px 0px 0px 3px rgb(16 185 129 / 10%);
+}
+
+.main-contact-form textarea{
+	resize: vertical;
+	min-height: 100px;
+}
+
+.contact-submit-btn{
+	width: 100%;
+	padding: 14px 25px;
+	background: linear-gradient(135deg, var(--main-color), #059669);
+	color: var(--bg-color);
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .40s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.contact-submit-btn:hover{
+	transform: translateY(-2px);
+	box-shadow: 0px 8px 20px rgb(16 185 129 / 30%);
+}
+
+/* Contact Form Section Responsive */
+@media (max-width: 1025px){
+	.contact-form-container{
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+	
+	.contact-info-side h3,
+	.contact-form-side h3{
+		font-size: 1.8rem;
+	}
+}
+
+@media (max-width: 890px){
+	.contact-form-section{
+		padding: 60px 5%;
+	}
+	
+	.main-contact-form{
+		padding: 25px 20px;
+	}
+	
+	.main-contact-form .form-row{
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+	
+	.contact-info-card{
+		padding: 15px;
+	}
+	
+	.contact-info-icon{
+		width: 45px;
+		height: 45px;
+	}
+	
+	.contact-info-icon i{
+		font-size: 18px;
+	}
+}
+
+@media (max-width: 600px){
+	.contact-info-side h3,
+	.contact-form-side h3{
+		font-size: 1.6rem;
+	}
+	
+	.contact-info-side > p{
+		font-size: 1rem;
+	}
+	
+	.contact-info-card{
+		padding: 12px;
+	}
+	
+	.contact-info-icon{
+		width: 40px;
+		height: 40px;
+	}
+	
+	.contact-info-icon i{
+		font-size: 16px;
+	}
+	
+	.contact-info-details h4{
+		font-size: 1rem;
+	}
+	
+	.contact-info-details p{
+		font-size: 0.9rem;
+	}
+	
+	.main-contact-form{
+		padding: 20px 15px;
+	}
+	
+	.main-contact-form input,
+	.main-contact-form select,
+	.main-contact-form textarea{
+		padding: 10px 12px;
+		font-size: 0.9rem;
+	}
+	
+	.contact-submit-btn{
+		padding: 12px 20px;
+		font-size: 0.95rem;
+	}
+}
