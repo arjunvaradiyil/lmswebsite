@@ -8,10 +8,10 @@
 	scroll-behavior: smooth;
 }
 :root{
-	--bg-color: #ffffff;
-	--text-color: #22100d;
-	--second-color: #685f78;
-	--main-color: #f66962;
+	--bg-color: #f8fafc;
+	--text-color: #1e3a2f;
+	--second-color: #2d5a4a;
+	--main-color: #10b981;
 	--big-font: 3.8rem;
 	--h2-font: 2.6rem;
 	--p-font: 1.1rem;
@@ -34,10 +34,16 @@ header{
 	transition: all .40s ease;
 }
 
-.logo img{
-	height: auto;
-	width: 160px;
-	max-width: 100%;
+.logo span{
+	font-size: 2rem;
+	font-weight: 800;
+	color: var(--main-color);
+	text-decoration: none;
+	transition: all .40s ease;
+}
+.logo span:hover{
+	color: var(--text-color);
+	transform: scale(1.05);
 }
 .navbar{
 	display: flex;
@@ -291,7 +297,7 @@ header.sticky{
 	left: 0;
 	width: 100%;
 	height: 4px;
-	background: linear-gradient(90deg, var(--main-color), #ff8a80);
+	background: linear-gradient(90deg, var(--main-color), #059669);
 	transform: scaleX(0);
 	transition: transform .40s ease;
 }
@@ -308,7 +314,7 @@ header.sticky{
 .feature-icon{
 	width: 80px;
 	height: 80px;
-	background: linear-gradient(135deg, var(--main-color), #ff8a80);
+	background: linear-gradient(135deg, var(--main-color), #059669);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -350,7 +356,7 @@ header.sticky{
 }
 
 .feature-badge span{
-	background: linear-gradient(135deg, var(--main-color), #ff8a80);
+	background: linear-gradient(135deg, var(--main-color), #059669);
 	color: var(--bg-color);
 	padding: 8px 16px;
 	border-radius: 20px;
@@ -981,8 +987,8 @@ header.sticky{
 	}
 	
 	/* Logo Responsive */
-	.logo img{
-		width: 120px;
+	.logo span{
+		font-size: 1.7rem;
 	}
 }
 
@@ -1080,8 +1086,8 @@ header.sticky{
 		font-size: 13px;
 	}
 	
-	.logo img{
-		width: 100px;
+	.logo span{
+		font-size: 1.5rem;
 	}
 }
 
@@ -1174,7 +1180,7 @@ header.sticky{
 		font-size: 12px;
 	}
 	
-	.logo img{
-		width: 80px;
+	.logo span{
+		font-size: 1.3rem;
 	}
 }
