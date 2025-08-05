@@ -33,14 +33,14 @@ export default function About(): JSX.Element {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="mb-8 lg:mb-0" ref={imageRef}>
-            <img src="/about.png" alt="About LearnX" className="w-full max-w-lg mx-auto rounded-xl shadow-lg" />
+            <img src="/about.png" alt="About EduMatrix" className="w-full max-w-lg mx-auto rounded-xl shadow-lg" />
           </div>
           <div ref={contentRef}>
             <h2 className="text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-6">
-              About LearnX
+              About EduMatrix
             </h2>
             <p className="text-gray-600 mb-4">
-              LearnX is a premier educational institution dedicated to providing world-class individual tuition services. We specialize in comprehensive education from Kindergarten to Post-Graduation, covering all subjects and syllabi including CBSE, ICSE, IGCSE, IB, and State Board curricula.
+            EduMatrix is a premier educational institution dedicated to providing world-class individual tuition services. We specialize in comprehensive education from Kindergarten to Post-Graduation, covering all subjects and syllabi including CBSE, ICSE, IGCSE, IB, and State Board curricula.
             </p>
             
             <h4 className="text-xl font-semibold text-gray-800 mt-6 mb-3">Our Mission</h4>
